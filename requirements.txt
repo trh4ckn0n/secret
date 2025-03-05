@@ -1,6 +1,6 @@
-streamlit==1.17.0
+streamlit
 uvicorn
 fastapi
-beautifulsoup4==4.11.1
-requests==2.28.1
-altair==4.2.0
+beautifulsoup4
+requests
+altair
