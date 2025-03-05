@@ -89,6 +89,29 @@ st.markdown(
             font-size: 16px;
             color: #ccc;
         }
+        .header {
+            text-align: center;
+            font-size: 30px;
+            color: #ff0000;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, #ffcc00, #ff6666, #66ccff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .message {
+            font-size: 18px;
+            color: #ccc;
+            padding: 10px;
+            background-color: #333;
+            border: 2px solid #FF0000;
+            border-radius: 8px;
+            margin: 5px;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.3);
+        }
+        .message:hover {
+            background-color: #444;
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -96,10 +119,8 @@ st.markdown(
 messages = get_irc_messages()
 
 if messages:
+    st.markdown("<div class='header'>Messages IRC</div>", unsafe_allow_html=True)
     for message in messages:
-        st.markdown(f"<div class='operation'>", unsafe_allow_html=True)
-        st.markdown(f"<h3>Message IRC:</h3>", unsafe_allow_html=True)
-        st.markdown(f"<p>{message}</p>", unsafe_allow_html=True)
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='message'>{message}</div>", unsafe_allow_html=True)
 else:
     st.warning("Aucun message trouvé dans le canal IRC.")
