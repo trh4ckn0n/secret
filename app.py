@@ -39,7 +39,7 @@ st.markdown(
     """
     <style>
         body {
-            background-color: #111;
+            background-color: #000002;
             color: #fff;
             font-family: 'Courier New', Courier, monospace;
             margin: 0;
@@ -48,17 +48,17 @@ st.markdown(
         h1 {
             text-align: center;
             font-size: 36px;
-            color: #FF0000;
+            color: #ff0000;
             text-transform: uppercase;
-            background: linear-gradient(90deg, #ffcc00, #ff6666, #66ccff);
+            background: linear-gradient(45deg, #ffcc00, #ff6666, #66ccff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             padding: 20px 0;
         }
         .stButton>button {
-            background-color: #FF0000;
+            background-color: #ff0000;
             color: white;
-            border: 2px solid #FF0000;
+            border: 2px solid #ff0000;
             border-radius: 10px;
             font-size: 18px;
             padding: 10px 20px;
@@ -74,7 +74,7 @@ st.markdown(
             margin-bottom: 10px;
             background-color: #222;
             border-radius: 8px;
-            border: 2px solid #FF0000;
+            border: 2px solid #ff0000;
             transition: all 0.3s ease-in-out;
         }
         .operation:hover {
@@ -112,6 +112,22 @@ st.markdown(
             background-color: #444;
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
         }
+        .about {
+            font-size: 18px;
+            color: #ffcc00;
+            background-color: #222;
+            padding: 20px;
+            border-radius: 8px;
+            border: 2px solid #ff0000;
+            margin-top: 20px;
+        }
+        .about h3 {
+            font-size: 24px;
+        }
+        .about p {
+            font-size: 16px;
+            color: #ccc;
+        }
     </style>
     """, unsafe_allow_html=True)
 
@@ -124,3 +140,9 @@ if messages:
         st.markdown(f"<div class='message'>{message}</div>", unsafe_allow_html=True)
 else:
     st.warning("Aucun message trouvé dans le canal IRC.")
+
+# About section
+st.markdown("<div class='about'>", unsafe_allow_html=True)
+st.markdown("<h3>About Trhacknon</h3>", unsafe_allow_html=True)
+st.markdown("<p>Trhacknon is a passionate developer and cybersecurity enthusiast focused on web exploitation and penetration testing. With expertise in various languages and a dedication to the hacking community, Trhacknon aims to educate and share knowledge in an exciting and interactive way.</p>", unsafe_allow_html=True)
+st.markdown("</div>", unsafe_allow_html=True)
