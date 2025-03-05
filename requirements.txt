@@ -1,6 +1,4 @@
 streamlit
-uvicorn
-fastapi
 beautifulsoup4
 requests
 altair
